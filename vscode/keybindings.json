@@ -1,0 +1,231 @@
+[
+	/* -------------------------------------------------------------------------- */
+	/*                                  ADDITIONS                                 */
+	/* -------------------------------------------------------------------------- */
+
+	{
+		"key": "ctrl+s",
+		"command": "workbench.action.showCommands"
+	},
+
+	/* ------------------------------- SUGGESTIONS ------------------------------ */
+
+	{
+		"key": "tab",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
+	{
+		"key": "shift+tab",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
+
+	/* ----------------- FILE EXPLORER OPERATIONS AND NAVIGATION ---------------- */
+
+	{
+		"key": "i",
+		"command": "list.focusUp",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "e",
+		"command": "list.focusDown",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "v",
+		"command": "explorer.openToSide",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "h",
+		"command": "runCommands",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+		"args": {
+			"commands": [
+				"workbench.action.splitEditorDown",
+				"explorer.openAndPassFocus",
+				"workbench.action.closeOtherEditors"
+			]
+		}
+	},
+	{
+		"key": "x",
+		"command": "filesExplorer.cut",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "c",
+		"command": "filesExplorer.copy",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
+	},
+	{
+		"key": "d",
+		"command": "deleteFile",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "p",
+		"command": "filesExplorer.paste",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "r",
+		"command": "renameFile",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+
+	/* ---------------------- GROUPS AND EDITORS MANAGMENT ---------------------- */
+
+	{
+		"key": "tab",
+		"command": "workbench.action.nextEditorInGroup",
+		"when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+	},
+	{
+		"key": "shift+tab",
+		"command": "workbench.action.previousEditorInGroup",
+		"when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "workbench.action.moveActiveEditorGroupUp"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.moveActiveEditorGroupRight"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.action.moveActiveEditorGroupDown"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "workbench.action.moveActiveEditorGroupLeft"
+	},
+	{
+		"key": "alt+i",
+		"command": "workbench.action.decreaseViewHeight",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+e",
+		"command": "workbench.action.increaseViewHeight",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+o",
+		"command": "workbench.action.increaseViewWidth",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+n",
+		"command": "workbench.action.decreaseViewWidth",
+		"when": "editorFocus"
+	},
+
+	/* ------------------------------- NAVIGATION ------------------------------- */
+
+	{
+		"key": "ctrl+alt+i",
+		"command": "workbench.action.navigateUp"
+	},
+	{
+		"key": "ctrl+alt+o",
+		"command": "workbench.action.navigateRight"
+	},
+	{
+		"key": "ctrl+alt+e",
+		"command": "workbench.action.navigateDown",
+	},
+	{
+		"key": "ctrl+alt+n",
+		"command": "workbench.action.navigateLeft",
+	},
+
+	/* -------------------------------- TERMINAL -------------------------------- */
+
+	{
+		"key": "ctrl+t f",
+		"command": "workbench.action.terminal.focusFind",
+		"when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+t o",
+		"command": "workbench.action.terminal.scrollToNextCommand",
+		"when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled"
+	},
+	{
+		"key": "ctrl+t n",
+		"command": "workbench.action.terminal.scrollToPreviousCommand",
+		"when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled"
+	},
+	{
+		"key": "up",
+		"command": "workbench.action.terminal.scrollUp",
+		"when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+	},
+	{
+		"key": "down",
+		"command": "workbench.action.terminal.scrollDown",
+		"when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+	},
+
+	/* -------------------------------------------------------------------------- */
+	/*                                  DELETIONS                                 */
+	/* -------------------------------------------------------------------------- */
+
+	{
+		"key": "ctrl+s",
+		"command": "-workbench.action.files.save"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "-workbench.action.files.openFile",
+		"when": "true"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "-workbench.action.quickOpen"
+	},
+
+	/* ------------------------------ VIM OVERRIDES ----------------------------- */
+
+	{
+		"key": "ctrl+c",
+		"command": "-extension.vim_ctrl+c",
+		"when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
+	},
+
+	/* -------------------------------- TERMINAL -------------------------------- */
+
+	{
+		"key": "ctrl+f",
+		"command": "-workbench.action.terminal.focusFind",
+		"when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+c",
+		"command": "-workbench.action.terminal.copyAndClearSelection",
+		"when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
+	},
+	{
+		"key": "ctrl+v",
+		"command": "-workbench.action.terminal.paste",
+		"when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpen"
+	}
+]

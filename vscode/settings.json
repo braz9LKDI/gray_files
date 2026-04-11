@@ -1,0 +1,271 @@
+{
+	/* -------------------------------------------------------------------------- */
+	/*                              APPEARENCE AND UI                             */
+	/* -------------------------------------------------------------------------- */
+
+	/* ----------------------------- GENERAL LAYOUT ----------------------------- */
+
+	"workbench.iconTheme": null,
+	"workbench.sideBar.location": "right",
+	"workbench.activityBar.location": "bottom",
+	"workbench.statusBar.visible": true,
+	"workbench.startupEditor": "none",
+	"workbench.editor.showTabs": "single",
+	"workbench.editor.editorActionsLocation": "hidden",
+	"zenMode.hideLineNumbers": false,
+
+	/* ---------------------------- FONT AND THEMING ---------------------------- */
+
+	"workbench.colorTheme": "Apprentice",
+	"editor.fontFamily": "CaskaydiaCove Nerd Font, CaskaydiaMono Nerd Font Mono, monospace",
+	"editor.fontSize": 18,
+	"editor.fontLigatures": true,
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"comment",
+					"entity.name.type.class",
+					"constant",
+					"storage.modifier",
+					"storage.type.class.js",
+					"keyword"
+				],
+				"settings": {
+					"fontStyle": "italic bold"
+				}
+			}
+		]
+	},
+
+	/* -------------------------------------------------------------------------- */
+	/*                              EDITOR BEHAVIOUR                              */
+	/* -------------------------------------------------------------------------- */
+
+	"window.newWindowProfile": "Default",
+
+	/* -------------------------- CURSOR AND SCROLLING -------------------------- */
+
+	"editor.smoothScrolling": true,
+	"workbench.list.smoothScrolling": true,
+	"editor.cursorBlinking": "expand",
+	"editor.cursorSmoothCaretAnimation": "on",
+
+	/* -------------------- CODE INTELLIGENCE AND ASSISTANCE -------------------- */
+
+	"editor.inlayHints.enabled": "on",
+	"editor.inlineSuggest.enabled": true,
+	"editor.linkedEditing": true,
+	"editor.stickyScroll.enabled": true,
+	"workbench.tree.enableStickyScroll": true,
+
+	/* ---------------------- VISUAL GUIDES AND WHITESPACE ---------------------- */
+
+	"editor.renderWhitespace": "all",
+	"editor.minimap.enabled": false,
+	"editor.glyphMargin": false,
+	"editor.rulers": [
+		80,
+		100
+	],
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.overviewRulerBorder": false,
+	"editor.hideCursorInOverviewRuler": true,
+
+	/* -------------------------------------------------------------------------- */
+	/*                        FORMATTING AND FILE HANDLING                        */
+	/* -------------------------------------------------------------------------- */
+
+	"files.autoSave": "onFocusChange",
+	"files.eol": "\n",
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"editor.formatOnPaste": true,
+	"editor.wordWrap": "off",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.wordWrap": "off",
+	"editor.codeActionsOnSave": {
+		"source.sortImports": "always"
+	},
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+
+	/* -------------------------------------------------------------------------- */
+	/*                                  TERMINAL                                  */
+	/* -------------------------------------------------------------------------- */
+
+	"terminal.integrated.fontSize": 18,
+	"terminal.integrated.defaultProfile.windows": "archlinux (WSL)",
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.enablePersistentSessions": false,
+
+	/* -------------------------------------------------------------------------- */
+	/*                           EXTENSION CONFIGURATION                          */
+	/* -------------------------------------------------------------------------- */
+
+	/* ----------------------------------- VIM ---------------------------------- */
+
+	"editor.lineNumbers": "relative",
+	"vim.useSystemClipboard": true,
+	"vim.leader": "<space>",
+	"vim.startInInsertMode": true,
+	"vim.useCtrlKeys": false,
+	"vim.highlightedyank.enable": true,
+	"vim.highlightedyank.color": "#6C6C6C",
+	"vim.highlightedyank.textColor": "#FFFFFF",
+	"vim.hlsearch": true,
+	"vim.showcmd": true,
+	"vim.normalModeKeyBindingsNonRecursive": [
+		// Navigation
+		{ "before": ["n"], "after": ["h"] },
+		{ "before": ["e"], "after": ["j"] },
+		{ "before": ["i"], "after": ["k"] },
+		{ "before": ["o"], "after": ["l"] },
+
+		// Insert
+		{ "before": ["l"], "after": ["i"] },
+		{ "before": ["L"], "after": ["I"] },
+
+		// Open line
+		{ "before": ["h"], "after": ["o"] },
+		{ "before": ["H"], "after": ["O"] },
+
+		// End of word
+		{ "before": ["j"], "after": ["e"] },
+		{ "before": ["J"], "after": ["E"] },
+
+		// Next search
+		{ "before": ["k"], "after": ["n"] },
+		{ "before": ["K"], "after": ["N"] },
+
+		// Splits
+		{ "before": ["<leader>", "s", "v"], "commands": ["workbench.action.newGroupRight"] },
+		{ "before": ["<leader>", "s", "h"], "commands": ["workbench.action.newGroupBelow"] },
+		{ "before": ["<leader>", "s", "e"], "commands": ["workbench.action.evenEditorWidths"] },
+
+		// Coding
+		{ "before": ["<leader>", "c", "c"], "commands": ["editor.action.commentLine"] },
+		{ "before": ["<leader>", "c", "r"], "commands": ["editor.action.rename"] },
+		{ "before": ["<leader>", "c", "a", "s"], "commands": ["workbench.action.showAllSymbols"] },
+		{ "before": ["<leader>", "c", "s"], "commands": ["workbench.action.gotoSymbol"] },
+
+		// Go to
+		{ "before": ["<leader>", "g", "d"], "commands": ["editor.action.revealDefinition"] },
+		{ "before": ["<leader>", "g", "r"], "commands": ["editor.action.goToReferences"] },
+		{ "before": ["<leader>", "g", "i"], "commands": ["editor.action.goToImplementation"] },
+
+		// Debug
+		{ "before": ["<leader>", "d", "a"], "commands": ["workbench.action.debug.selectandstart"] },
+		{ "before": ["<leader>", "d", "t"], "commands": ["workbench.action.debug.stop"] },
+		{ "before": ["<leader>", "d", "o"], "commands": ["workbench.action.debug.stepOver"] },
+		{ "before": ["<leader>", "d", "b"], "commands": ["editor.debug.action.toggleBreakpoint"] },
+		{ "before": ["<leader>", "d", "e"], "commands": ["editor.debug.action.showDebugHover"] },
+		{ "before": ["<leader>", "d", "c"], "commands": ["workbench.action.debug.continue"] },
+
+		// Pseudo Telescope
+		{ "before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+		{ "before": ["<leader>", "f", "s"], "commands": ["workbench.action.findInFiles"] },
+		{ "before": ["<leader>", "f", "b"], "commands": ["workbench.action.showAllEditors"] },
+
+		// Increment/decrement numbers
+		{ "before": ["<leader>", "+"], "after": ["<C-a>"] },
+		{ "before": ["<leader>", "-"], "after": ["<C-x>"] },
+
+		// Toggle file explorer
+		{ "before": ["<leader>", "e"], "commands": ["workbench.files.action.focusFilesExplorer"] },
+
+		// Close editor
+		{ "before": ["<leader>", "w" ], "commands": ["workbench.action.closeActiveEditor"] },
+
+		// Close group
+		{ "before": ["<leader>", "W" ], "commands": ["workbench.action.closeEditorsInGroup"] },
+
+		// Hover
+		{ "before": ["I"], "commands": ["editor.action.showHover"] },
+
+		// Toggle zen mode
+		{ "before": ["<leader>", "z" ], "commands": ["workbench.action.toggleZenMode"] },
+
+		// Toggle monocle mode
+		{ "before": ["<leader>", "m" ], "commands": ["workbench.action.toggleMaximizeEditorGroup"] },
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		// Navigation
+		{ "before": ["n"], "after": ["h"] },
+		{ "before": ["e"], "after": ["j"] },
+		{ "before": ["i"], "after": ["k"] },
+		{ "before": ["o"], "after": ["l"] },
+
+		// Insert / Inner text object
+		{ "before": ["l"], "after": ["i"] },
+		{ "before": ["L"], "after": ["I"] },
+
+		// Other end of selection
+		{ "before": ["h"], "after": ["o"] },
+		{ "before": ["H"], "after": ["O"] },
+
+		// End of word
+		{ "before": ["j"], "after": ["e"] },
+		{ "before": ["J"], "after": ["E"] },
+
+		// Next search
+		{ "before": ["k"], "after": ["n"] },
+		{ "before": ["K"], "after": ["N"] },
+
+		// Move lines
+		{ "before": ["I"], "commands": ["editor.action.moveLinesUpAction"] },
+		{ "before": ["E"], "commands": ["editor.action.moveLinesDownAction"] },
+
+		// Coding
+		{ "before": ["<leader>", "c", "c"], "commands": ["editor.action.blockComment"] },
+		{ "before": ["<"], "after": ["<", "g", "v"] },
+		{ "before": [">"], "after": [">", "g", "v"] }
+	],
+	"vim.operatorPendingModeKeyBindingsNonRecursive": [
+		// Navigation
+		{ "before": ["n"], "after": ["h"] },
+		{ "before": ["e"], "after": ["j"] },
+		{ "before": ["i"], "after": ["k"] },
+		{ "before": ["o"], "after": ["l"] },
+
+		// Insert / Inner text object
+		{ "before": ["l"], "after": ["i"] },
+		{ "before": ["L"], "after": ["I"] },
+
+		// End of word
+		{ "before": ["j"], "after": ["e"] },
+		{ "before": ["J"], "after": ["E"] },
+
+		// Next search
+		{ "before": ["k"], "after": ["n"] },
+		{ "before": ["K"], "after": ["N"] },
+	],
+
+	/* ----------------------------------- AI ----------------------------------- */
+
+	"github.copilot.enable": {
+		"*": false
+	},
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"chat.viewSessions.enabled": false,
+
+	/* -------------------------------------------------------------------------- */
+	/*                         LANGUAGE-SPECIFIC SETTINGS                         */
+	/* -------------------------------------------------------------------------- */
+
+	"[markdown]": {
+		"editor.rulers": []
+	},
+	"files.associations": {
+		"*.yml": "yaml"
+	},
+
+	/* -------------------------------------------------------------------------- */
+	/*                          PROFILE-SPECIFIC SETTINGS                         */
+	/* -------------------------------------------------------------------------- */
+}

@@ -46,6 +46,8 @@ declare -r programs=(
 	"zathura"
 	"git"
 	"openSSH"
+	"vscode"
+	"vscode"
 )
 
 declare -r target_paths=(
@@ -65,6 +67,8 @@ declare -r target_paths=(
 	"zathura"
 	".gitconfig"
 	"ssh_config"
+	"vscode/keybindings.json"
+	"vscode/settings.json"
 )
 
 declare -r link_paths=(
@@ -84,6 +88,8 @@ declare -r link_paths=(
 	".config/zathura"
 	""
 	".ssh/config"
+	".config/Code"
+	".config/Code"
 )
 
 # Ensure metadata integrity
