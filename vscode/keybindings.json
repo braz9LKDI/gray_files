@@ -81,7 +81,7 @@
 		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 	},
 
-	/* ---------------------- GROUPS AND EDITORS MANAGMENT ---------------------- */
+	/* ---------------------- GROUPS AND EDITORS MANAGEMENT --------------------- */
 
 	{
 		"key": "tab",
@@ -110,22 +110,22 @@
 		"command": "workbench.action.moveActiveEditorGroupLeft"
 	},
 	{
-		"key": "alt+i",
+		"key": "ctrl+up",
 		"command": "workbench.action.decreaseViewHeight",
 		"when": "editorFocus"
 	},
 	{
-		"key": "alt+e",
-		"command": "workbench.action.increaseViewHeight",
-		"when": "editorFocus"
-	},
-	{
-		"key": "alt+o",
+		"key": "ctrl+right",
 		"command": "workbench.action.increaseViewWidth",
 		"when": "editorFocus"
 	},
 	{
-		"key": "alt+n",
+		"key": "ctrl+down",
+		"command": "workbench.action.increaseViewHeight",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+left",
 		"command": "workbench.action.decreaseViewWidth",
 		"when": "editorFocus"
 	},
@@ -142,11 +142,11 @@
 	},
 	{
 		"key": "ctrl+alt+e",
-		"command": "workbench.action.navigateDown",
+		"command": "workbench.action.navigateDown"
 	},
 	{
 		"key": "ctrl+alt+n",
-		"command": "workbench.action.navigateLeft",
+		"command": "workbench.action.navigateLeft"
 	},
 
 	/* -------------------------------- TERMINAL -------------------------------- */
