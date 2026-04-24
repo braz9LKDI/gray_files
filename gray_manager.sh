@@ -88,8 +88,8 @@ declare -r link_paths=(
 	".config/zathura"
 	""
 	".ssh/config"
-	".config/Code"
-	".config/Code"
+	".config/Code/User/keybindings.json"
+	".config/Code/User/settings.json"
 )
 
 # Ensure metadata integrity
