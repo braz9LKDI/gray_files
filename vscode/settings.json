@@ -17,8 +17,8 @@
 	/* ---------------------------- FONT AND THEMING ---------------------------- */
 
 	"workbench.colorTheme": "Apprentice",
-	"editor.fontFamily": "CaskaydiaCove Nerd Font, CaskaydiaMono Nerd Font Mono, monospace",
-	"editor.fontSize": 18,
+	"editor.fontFamily": "ComicShannsMono Nerd Font Mono, monospace",
+	"editor.fontSize": 22,
 	"editor.fontLigatures": true,
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
@@ -82,8 +82,8 @@
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
-	"editor.detectIndentation": false,
-	"editor.insertSpaces": false,
+	"editor.detectIndentation": true,
+	"editor.insertSpaces": true,
 	"editor.tabSize": 4,
 	"editor.formatOnPaste": true,
 	"editor.wordWrap": "off",
@@ -99,7 +99,7 @@
 	/*                                  TERMINAL                                  */
 	/* -------------------------------------------------------------------------- */
 
-	"terminal.integrated.fontSize": 18,
+	"terminal.integrated.fontSize": 22,
 	"terminal.integrated.defaultProfile.windows": "archlinux (WSL)",
 	"terminal.integrated.smoothScrolling": true,
 	"terminal.integrated.enablePersistentSessions": false,
@@ -253,6 +253,20 @@
 	},
 	"github.copilot.nextEditSuggestions.enabled": true,
 	"chat.viewSessions.enabled": false,
+	"github.copilot.chat.commitMessageGeneration.instructions": [
+		{
+			"text": "When generating commit messages, use exactly: <type>(<scope>): <short_summary>."
+		},
+		{
+			"text": "Allowed types: feat, fix, docs, style, perf, test, build, chore, revert."
+		},
+		{
+			"text": "Allowed scopes: api, service, core, config, db, auth, ui, test, docs, lint, deps, build, ci, release."
+		},
+		{
+			"text": "Rules: one title line always required; use imperative mood; keep short_summary concise (about 72 chars max); no trailing period; add body only when needed."
+		}
+	],
 
 	/* -------------------------------------------------------------------------- */
 	/*                         LANGUAGE-SPECIFIC SETTINGS                         */
@@ -263,7 +277,7 @@
 	},
 	"files.associations": {
 		"*.yml": "yaml"
-	},
+    },
 
 	/* -------------------------------------------------------------------------- */
 	/*                          PROFILE-SPECIFIC SETTINGS                         */
